@@ -1,7 +1,8 @@
 # Groovarr Developer Guide (DEV.md)
 
-This document is for contributors who want to build, test, and extend Groovarr.  
-For installation and usage instructions, see [INSTALL.md](INSTALL.md) and [USAGE.md](USAGE.md).
+This document is for contributors who want to build, test, and extend Groovarr.
+
+For installation and usage instructions, see [SETUP.md](SETUP.md) and [USAGE.md](USAGE.md).
 
 ---
 
@@ -18,18 +19,21 @@ For installation and usage instructions, see [INSTALL.md](INSTALL.md) and [USAGE
 ## 🚀 Local Development Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/<owner>/groovarr.git
    cd groovarr
    ```
 
 2. Build backend:
+
    ```bash
    dotnet restore backend/Groovarr.Api/Groovarr.Api.csproj
    dotnet build backend/Groovarr.Api/Groovarr.Api.csproj -c Debug
    ```
 
 3. Build frontend:
+
    ```bash
    cd frontend/web
    npm ci
@@ -37,6 +41,7 @@ For installation and usage instructions, see [INSTALL.md](INSTALL.md) and [USAGE
    ```
 
 4. Run backend with hot reload:
+
    ```bash
    dotnet watch run --project backend/Groovarr.Api/Groovarr.Api.csproj
    ```
@@ -59,11 +64,13 @@ Both scripts bundle backend + frontend into a portable archive.
 Groovarr uses [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) for self‑documenting APIs.
 
 ### Add Package
+
 ```bash
 dotnet add package Swashbuckle.AspNetCore
 ```
 
 ### Enable in `Program.cs`
+
 ```csharp
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -88,6 +95,7 @@ if (app.Environment.IsDevelopment())
 
 - Unit tests are located in `tests/Groovarr.Tests/`.
 - Run tests:
+
   ```bash
   dotnet test tests/Groovarr.Tests/Groovarr.Tests.csproj
   ```
@@ -106,7 +114,7 @@ if (app.Environment.IsDevelopment())
 
 ## 📂 Project Structure
 
-```
+```code
 groovarr/
 ├── backend/
 │   └── Groovarr.Api/        # ASP.NET Core backend

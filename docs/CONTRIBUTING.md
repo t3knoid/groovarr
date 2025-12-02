@@ -1,6 +1,7 @@
 # Contributing to Groovarr
 
-Thank you for your interest in contributing to Groovarr!  
+Thank you for your interest in contributing to Groovarr!
+
 This document outlines guidelines and best practices for contributing code, documentation, and ideas.
 
 ---
@@ -8,18 +9,24 @@ This document outlines guidelines and best practices for contributing code, docu
 ## 🧩 How to Contribute
 
 1. **Fork the repository** and create your branch from `main`.
+
    ```bash
    git checkout -b feature/my-feature
    ```
+
 2. **Make your changes** (code, docs, tests).
-3. **Run tests** to ensure everything passes:
+3. **Run tests** to ensure everything passes.
+
    ```bash
    dotnet test tests/Groovarr.Tests/Groovarr.Tests.csproj
    ```
+
 4. **Commit with clear messages**:
+
    ```bash
    git commit -m "Add playlist export endpoint"
    ```
+
 5. **Push your branch** and open a Pull Request (PR).
 
 ---
@@ -51,9 +58,10 @@ This document outlines guidelines and best practices for contributing code, docu
 
 ## 📂 Project Structure
 
-```
+```code
 groovarr/
 ├── backend/          # ASP.NET Core API
+├── docs/             # Documentation
 ├── frontend/         # React/Vite UI
 ├── tests/            # Unit tests
 ├── build.sh          # Linux/macOS build script
@@ -73,7 +81,7 @@ groovarr/
 
 ## 📑 Documentation
 
-- Update **INSTALL.md** and **USAGE.md** for user‑facing changes.
+- Update **SETUP.md** and **USAGE.md** for user‑facing changes.
 - Update **API.md** for new endpoints.
 - Update **DEV.md** for developer workflows.
 - Keep docs clear, concise, and consistent.

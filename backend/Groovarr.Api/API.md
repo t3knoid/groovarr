@@ -10,7 +10,7 @@ All endpoints are prefixed with `/api`.
 - **AuthDbContext** manages Plex tokens and share links.
 - Endpoints requiring authentication expect a valid Plex token in the `Authorization` header:
   
-  ```
+  ```code
   Authorization: Bearer <plex-token>
   ```
 
@@ -19,9 +19,11 @@ All endpoints are prefixed with `/api`.
 ## 🎶 Playlists
 
 ### GET `/api/playlists`
+
 Retrieve all playlists.
 
 **Response:**
+
 ```json
 [
   {
@@ -35,14 +37,17 @@ Retrieve all playlists.
 ---
 
 ### GET `/api/playlists/{id}`
+
 Retrieve a single playlist by ID.
 
 ---
 
 ### POST `/api/playlists`
+
 Create a new playlist.
 
 **Request:**
+
 ```json
 {
   "name": "Workout",
@@ -53,11 +58,13 @@ Create a new playlist.
 ---
 
 ### PUT `/api/playlists/{id}`
+
 Update an existing playlist.
 
 ---
 
 ### DELETE `/api/playlists/{id}`
+
 Delete a playlist and its associated tracks.
 
 ---
@@ -65,14 +72,17 @@ Delete a playlist and its associated tracks.
 ## 🎵 Tracks
 
 ### GET `/api/playlists/{id}/tracks`
+
 Retrieve all tracks in a playlist.
 
 ---
 
 ### POST `/api/playlists/{id}/tracks`
+
 Add a track to a playlist.
 
 **Request:**
+
 ```json
 {
   "title": "Song Title",
@@ -85,6 +95,7 @@ Add a track to a playlist.
 ---
 
 ### DELETE `/api/playlists/{id}/tracks/{trackId}`
+
 Remove a track from a playlist.
 
 ---
@@ -92,9 +103,11 @@ Remove a track from a playlist.
 ## 🔗 Share Links
 
 ### POST `/api/share`
+
 Create a share link for a playlist.
 
 **Request:**
+
 ```json
 {
   "playlistId": 1,
@@ -103,6 +116,7 @@ Create a share link for a playlist.
 ```
 
 **Response:**
+
 ```json
 {
   "code": "abc123",
@@ -113,6 +127,7 @@ Create a share link for a playlist.
 ---
 
 ### GET `/api/share/{code}`
+
 Retrieve a shared playlist by code.
 
 ---
@@ -120,9 +135,11 @@ Retrieve a shared playlist by code.
 ## 🔒 Plex Tokens
 
 ### POST `/api/auth/token`
+
 Store a Plex token.
 
 **Request:**
+
 ```json
 {
   "userId": "user@example.com",
@@ -133,6 +150,7 @@ Store a Plex token.
 ---
 
 ### GET `/api/auth/token/{userId}`
+
 Retrieve a Plex token for a user.
 
 ---

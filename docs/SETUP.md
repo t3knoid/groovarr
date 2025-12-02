@@ -1,7 +1,4 @@
-
----
-
-# 🚀 Groovarr Setup Guide
+# 🚀 Groovarr Setup Guide for Linux
 
 Groovarr is an open‑source playlist manager with an **ASP.NET Core + EF Core backend** and a **React + Vite frontend**. This guide walks you through setting up both parts together.
 
@@ -10,7 +7,8 @@ It is recommended to use [Visual Studio Code](https://code.visualstudio.com/down
 ---
 
 ## 📂 Project Structure
-```
+
+```code
 groovarr/
 ├── backend/
 │   └── Groovarr.Api/        # ASP.NET Core Web API
@@ -30,7 +28,8 @@ groovarr/
 
 ## ⚙️ Backend Setup (ASP.NET Core + EF Core)
 
-### 1. Prerequisites
+### 1. Backend Prerequisites
+
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
   ```bash
@@ -104,7 +103,7 @@ curl http://localhost:5000/swagger/v1/swagger.json
 
 Run from `frontend/web/`:
 
-### 1. Prerequisites
+### 1. Frontend Prerequisites
 
 - [Node.js LTS](https://nodejs.org/) (includes npm). Use Node Version Manager (nvm) to install latest.
 
@@ -166,7 +165,7 @@ Visit `http://localhost:4173`.
 
 ## 🔗 Quickstart Script (Optional)
 
-Execute `./scripts/dev.sh` from the project root to start the Groovar application.
+Execute `./scripts/dev.sh` from the project root to start the Groovarr application.
 
 ```bash
 #!/bin/bash
@@ -205,5 +204,3 @@ Frontend → `http://localhost:5173`
 - **Backend**: configure DB, run migrations, start API.  
 - **Frontend**: install npm deps, run dev server, connect via `.env`.  
 - **Quickstart**: one script launches both together.  
-
----
